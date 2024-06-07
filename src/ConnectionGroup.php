@@ -2,7 +2,7 @@
 
 namespace Reactphp\Framework\ConnectionGroup;
 
-class ConnectionManager
+class ConnectionGroup
 {
     // 连接相关
     protected $connections;
