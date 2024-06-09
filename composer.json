@@ -12,5 +12,7 @@
             "email": "wpjscc@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "evenement/evenement": "^3.0"
+    }
 }

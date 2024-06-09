@@ -2,8 +2,13 @@
 
 namespace Reactphp\Framework\ConnectionGroup;
 
-class ConnectionGroup
+use Evenement\EventEmitterTrait;
+use Evenement\EventEmitterInterface;
+
+class ConnectionGroup implements EventEmitterInterface
 {
+    use EventEmitterTrait;
+
     // 连接相关
     protected $connections;
     protected $connection_id_to_connection = [];
