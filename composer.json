@@ -13,6 +13,7 @@
         }
     ],
     "require": {
-        "evenement/evenement": "^3.0"
+        "evenement/evenement": "^3.0",
+        "reactphp-framework/single": "^1.0"
     }
 }

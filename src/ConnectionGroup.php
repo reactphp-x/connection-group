@@ -28,6 +28,11 @@ class ConnectionGroup implements EventEmitterInterface
 
     public function __construct()
     {
+        $this->init();
+    }
+
+    protected function init()
+    {
         $this->connections = new \SplObjectStorage;
     }
 
