@@ -326,12 +326,17 @@ class ConnectionGroup implements EventEmitterInterface
         $_ids = $this->_get_IdsById($id);
         $state = 2;
 
-        foreach ($_ids as $_id) {
-            $_state = $this->joinGroupBy_Id($groupId, $_id);
-            if ($_state < $state) {
-                $state = $_state;
+        $groupIds = explode(',', $groupId);
+
+        foreach ($groupIds as $groupId) {
+            foreach ($_ids as $_id) {
+                $_state = $this->joinGroupBy_Id($groupId, $_id);
+                if ($_state < $state) {
+                    $state = $_state;
+                }
             }
         }
+
         return $state;
     }
 
@@ -348,12 +353,18 @@ class ConnectionGroup implements EventEmitterInterface
     {
         $_ids = $this->_get_IdsById($id);
         $state = 2;
-        foreach ($_ids as $_id) {
-            $_state = $this->leaveGroupBy_Id($groupId, $_id);
-            if ($_state < $state) {
-                $state = $_state;
+
+        $groupIds = explode(',', $groupId);
+
+        foreach ($groupIds as $groupId) {
+            foreach ($_ids as $_id) {
+                $_state = $this->leaveGroupBy_Id($groupId, $_id);
+                if ($_state < $state) {
+                    $state = $_state;
+                }
             }
         }
+        
         return $state;
     }
 
