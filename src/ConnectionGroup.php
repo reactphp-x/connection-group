@@ -562,6 +562,11 @@ class ConnectionGroup implements EventEmitterInterface
         return array_keys($this->connection_id_to_id);
     }
 
+    public function getBind_IdsById($id)
+    {
+        return $this->_get_IdsById($id);
+    }
+
     public function getIdCount()
     {
         return count($this->getIds());
