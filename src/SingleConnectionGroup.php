@@ -1,10 +1,10 @@
 <?php
 
-namespace Reactphp\Framework\ConnectionGroup;
+namespace ReactphpX\ConnectionGroup;
 
 class SingleConnectionGroup extends ConnectionGroup
 {
-    use \Reactphp\Framework\Single\Single;
+    use \ReactphpX\Single\Single;
 
     protected function init()
     {

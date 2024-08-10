@@ -1,9 +1,9 @@
 {
-    "name": "reactphp-framework/connection-group",
+    "name": "reactphp-x/connection-group",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Reactphp\\Framework\\ConnectionGroup\\": "src/"
+            "ReactphpX\\ConnectionGroup\\": "src/"
         }
     },
     "authors": [
@@ -14,6 +14,6 @@
     ],
     "require": {
         "evenement/evenement": "^3.0",
-        "reactphp-framework/single": "^1.0"
+        "reactphp-x/single": "^1.0"
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace Reactphp\Framework\ConnectionGroup;
+namespace ReactphpX\ConnectionGroup;
 
 use Evenement\EventEmitterTrait;
 use Evenement\EventEmitterInterface;
