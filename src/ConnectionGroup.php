@@ -206,7 +206,7 @@ class ConnectionGroup implements EventEmitterInterface
 
     protected function _isInGroup($groupId, $_id)
     {
-        return $this->connection_id_to_group_ids[$_id][$groupId] ?? false;
+        return ($this->connection_id_to_group_ids[$_id][$groupId] ?? false) ? true : false;
     }
 
     protected function _sendMessageTo_Id($_id, $msg)
