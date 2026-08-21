@@ -404,8 +404,12 @@ class ConnectionGroup implements EventEmitterInterface
         $this->_sendMessageTo_Id($_id, $msg);
     }
 
-    public function sendToClient($_id = '', $msg, $id = 0, $exclude_Ids = [])
+    public function sendToClient($_id = '', $msg = null, $id = 0, $exclude_Ids = [])
     {
+        if ($msg === null) {
+            throw new \InvalidArgumentException('Message is required');
+        }
+
         if ($id) {
             $this->sendMessageToId($id, $msg, $exclude_Ids);
         } else {
